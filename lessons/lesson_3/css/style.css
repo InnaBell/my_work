@@ -1,0 +1,54 @@
+@import url("reset.css");
+
+* {
+	/* color: darkgray; */
+}
+
+div {
+	color: rgb(92, 88, 88);
+}
+
+.text {
+	color: yellow;
+}
+
+#p-0 {
+	color: magenta;
+}
+
+div.text {
+	color: green;
+}
+
+.list,
+.links {
+	color: blue;
+}
+
+.text p {
+	color: green;
+}
+
+.paragraph .description {
+	color: orange;
+}
+
+.paragraph * {
+	color: black;
+}
+
+.investigation>p {
+	color: rgb(62, 191, 230);
+}
+
+.level~p {
+	color: rgb(166, 230, 62);
+}
+
+.level+p {
+	color: red;
+}
+
+[class*="__container"] {
+	color: rgb(67, 15, 64);
+}
