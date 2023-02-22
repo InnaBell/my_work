@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,500,700&display=swap);
+
+body {
+	font-family: "Poppins", sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: #6C757D;
+	background-color: #F8F9FA;
+}
+
+/* Ограничивающий контейнер */
+/* Используем селектор атрибутов - выбираем класс, в значении которого есть _container */
+[class*="__container"] {
+	/* 1240+30 - Добавляем 30 пикс. паддинга*/
+	max-width: 1270px;
+	margin: 0 auto;
+	/* Чтобы при просмотре на меньшем экране оставалось по 15 пикс с каждой стороны огранич. контейнера*/
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.article {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+/* Дополнительный ограничивающий контейнер*/
+.article__text-block {
+	max-width: 816px;
+	margin: 0 auto 80px;
+}
+
+.article__text-block p {
+	line-height: 1.78;
+	margin-bottom: 30px;
+}
+
+.article__title {
+	color: #212529;
+	font-size: 25px;
+	line-height: 1.6;
+	/* 40/25=1.6*/
+	margin-bottom: 40px;
+	font-weight: 700;
+	max-width: 605px;
+}
+
+.article__image {
+	/* Чтобы ихзображение стало резиновым*/
+	max-width: 100%;
+	margin-bottom: 80px;
+}
+
+.images {
+	/* font-size: 0px Прибирает пробел между изображениями */
+	font-size: 0px;
+	margin-bottom: 80px;
+}
+
+.image {
+	max-width: 100%;
+}
+
+.image_1 {
+	margin-right: 30px;
+}
+
+.article {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.article__background {
+	max-width: 100%;
+	margin-bottom: 100px;
+}
+
+.carousel {
+	font-size: 0px;
+	margin-bottom: 100px;
+	margin-top: 100px;
+}
+
+.article__title_1 {
+	margin-top: 100px;
+}
