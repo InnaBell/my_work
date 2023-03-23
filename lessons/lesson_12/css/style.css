@@ -1,0 +1,313 @@
+@import url("reset.css");
+@import url("common.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600&display=swap");
+
+body {
+	font-family: "Inter", sans-serif;
+	background-color: #ffffff;
+	color: #ffffff;
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+}
+
+h1 {
+	font-size: 40px;
+	margin: 70px 0px 70px 0px;
+	color: #414141;
+}
+
+.content {
+	max-width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+	padding: 0 0 200px 0;
+}
+
+.content__row:not(:last-child) {
+	margin-bottom: 70px;
+}
+
+.content__wrapper {
+	display: inline-block;
+	background-color: #9e80b9;
+}
+
+.content__wrapper:not(:last-child) {
+	margin-right: 20px;
+}
+
+.block {
+	height: 150px;
+	width: 150px;
+	background-color: #77608d;
+	text-transform: uppercase;
+	padding-top: 65px;
+	text-align: center;
+}
+
+.content__translate:hover {
+	transform: translate(-50px, 20px);
+	transition: 0.8s;
+}
+
+.content__scale:hover {
+	transform: scale(1, 0.5);
+	transition: 0.8s;
+}
+
+.content__rotate:hover {
+	transform: rotate(-360deg);
+	transition: 1s;
+}
+
+.content__skew:hover {
+	transform: skewY(35deg);
+	transition: 0.8s;
+}
+
+.content__matrix:hover {
+	transform: matrix(1.3, 0, 0, 1.2, 0, 0);
+	transition: 0.8s;
+}
+
+.content__multi:hover {
+	transform: translate(-50px, -50px) scale(0.5) rotate(45deg);
+	transition: 0.8s;
+}
+
+.content__transform-origin:hover {
+	transform-origin: bottom center;
+	transform: rotate(45deg);
+	transition: 0.8s;
+}
+
+.content__row3d {
+	margin-bottom: 70px;
+}
+
+.content__wrapper3d {
+	display: inline-block;
+	background-color: #9e80b9;
+	perspective: 400px;
+	perspective-origin: center;
+}
+
+.content__wrapper3d:not(:last-child) {
+	margin-right: 20px;
+}
+
+.content__perspective:hover {
+	transform: rotateY(50deg);
+	transition: 0.8s;
+}
+
+.content__translate3d:hover {
+	transform: translate3D(0px, 0px, 80px);
+	transition: 0.8s;
+}
+
+.content__scale3d:hover {
+	transform: scale3d(0, 0, 0.5);
+	transition: 0.8s;
+}
+
+.content__rotate3d:hover {
+	transform: rotate3d(0, 2, 1, 75deg);
+	transition: 0.8s;
+}
+
+.content__multi3d:hover {
+	transform: translate3d(30px, 30px, 30px) rotate3d(0, 1, 1, 50deg);
+	transition: 0.8s;
+}
+
+.content__wrapper3d-style {
+	display: inline-block;
+	background-color: #9e80b9;
+	perspective: 400px;
+	transform-style: preserve-3d;
+}
+
+.content__transform-style:hover {
+	transform: rotateX(90deg);
+	transition: 0.8s;
+}
+
+/* Flip переворот карточки */
+.flip {
+	perspective: 500px;
+	transform-style: preserve-3d;
+}
+
+.flip__body {
+	position: relative;
+	width: 535px;
+	height: 296px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+
+.flip__front,
+.flip__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flip__front {
+	z-index: 2;
+	transform: rotateY(0deg);
+	background: url("../img/front.png") center / contain no-repeat scroll;
+
+	backface-visibility: hidden;
+}
+
+.flip__back {
+	transform: rotateY(-180deg);
+	background: url("../img/back.png") center / contain no-repeat scroll;
+}
+
+.flip:hover .flip__body {
+	transform: rotateY(-180deg);
+}
+
+.content__wrapper-card {
+	display: inline-block;
+}
+
+
+/* Car with CSS */
+
+.car-text {
+	font-size: 40px;
+	margin: 70px 0px 200px 0px;
+	color: #414141;
+}
+
+.car {
+	width: 500px;
+	height: 100px;
+	background-color: #171719;
+	border-radius: 0 30px 0 0;
+	position: relative;
+}
+
+.cabine {
+	width: 200px;
+	height: 100px;
+	background-color: #06070A;
+	position: absolute;
+	border-radius: 30px 100px 0px 0px / 30px 100px 100px 0px;
+	top: -100%;
+	right: 100px;
+}
+
+.bottom {
+	width: 520px;
+	height: 20px;
+	background-color: #06070A;
+	position: absolute;
+	border-radius: 8px;
+	top: 85px;
+	left: -10px;
+}
+
+.cabine::before {
+	content: "";
+	background-color: #C5C5C5;
+	width: 140px;
+	height: 80px;
+	position: absolute;
+	border-radius: 30px 100px 0px 0px / 30px 100px 100px 0px;
+	border: 2px solid rgb(255, 255, 255);
+	left: 30px;
+	top: 20px;
+}
+
+.cabine::after {
+	content: "";
+	background-color: #2D2D2D;
+	width: 170px;
+	height: 15px;
+	position: absolute;
+	border-radius: 10px;
+	left: -185px;
+	top: 110px;
+}
+
+.car::before {
+	content: "";
+	background-color: #D51F27;
+	width: 20px;
+	height: 45px;
+	position: absolute;
+	border-radius: 10px 10px 10px 10px;
+	left: -5px;
+	top: 30px;
+}
+
+.car::after {
+	content: "";
+	background-color: #FE6D27;
+	width: 30px;
+	height: 45px;
+	position: absolute;
+	border-radius: 5px 5px 5px 5px;
+	right: -5px;
+	top: 30px;
+}
+
+.car__wheels {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+}
+
+.car__wheel {
+	width: 80px;
+	height: 80px;
+	background-color: #06070A;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.car__wheel:first-child {
+	left: 40px;
+}
+
+.car__wheel:last-child {
+	right: 40px;
+}
+
+.car__wheel::before {
+	content: "";
+	background-color: #161618;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	border-radius: 50%;
+	left: 10px;
+	top: 10px;
+	z-index: 1;
+}
+
+.car__wheel::after {
+	content: "";
+	background-color: #454545;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	border-radius: 50%;
+	left: 20px;
+	top: 20px;
+	z-index: 1;
+}
